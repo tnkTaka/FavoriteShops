@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding = "utf-8" ?>
+<!--
+
+メモ編集画面レイアウトファイル
+
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="local.hal.st21.android.favoriteshops60213.ShopEditActivity">
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_back"
+        android:onClick="onBackButtonClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        android:onClick="onSaveButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_title_edit"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInputTitle"
+        android:layout_width="44dp"
+        android:layout_height="23dp"
+        android:text="@string/tv_input_title"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etInputTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etInputTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvInputTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleEdit" />
+
+    <TextView
+        android:id="@+id/tvInputTell"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:text="@string/tv_input_tell"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etInputTell"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etInputTell"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvInputTell"
+        app:layout_constraintTop_toBottomOf="@+id/etInputTitle" />
+
+    <TextView
+        android:id="@+id/tvInputUrl"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_input_url"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etInputUrl"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etInputUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textUri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/tvInputUrl"
+        app:layout_constraintTop_toBottomOf="@+id/etInputTell" />
+
+    <TextView
+        android:id="@+id/tvInputContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_input_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInputUrl" />
+
+    <EditText
+        android:id="@+id/etInputContent"
+        android:layout_width="0dp"
+        android:layout_height="215dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/btnDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInputContent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#FF6666"
+        android:onClick="onDeleteButtonClick"
+        android:text="@string/btn_delete"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
